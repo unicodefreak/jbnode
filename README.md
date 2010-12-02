@@ -2,12 +2,12 @@
 
 ##About
 
-jbNode is a simple client/server framework supposed to provide a fast and simple access to Java services from node.JS
+jbNode ('java-bridge-node') is a simple client/server framework supposed to provide a fast and simple access to Java services from node.JS
 
-There are many applications that can benefit from lightweight and hyper-fast node.JS architecture. There are also many development issues that can't be solved using pure JavaScript and node.JS API.
+There are many applications that can benefit from lightweight and hyper-fast node.js architecture. There are also many development issues that can't be solved using pure JavaScript and node.JS API.
 The examples are: blocking and heavy tasks, operations with large amounts of data, intergation with external systems using complex interface, usage of complicated code that is difficult to reimplement.
 
-One of solutions is to create runtime modules. It may be the best way to deal with preexisting C/C++ code, but in most cases maintainance and development of such modules will be difficult for web service developer. Others include spawning of child processes or communication with server systems using network streams. jbNode is an attempt to create simple and generic interface between node.JS and Java. On the Java side the Netty server is used - the fasted non-blocking single threaded server available for Java. 
+One of solutions is to create runtime modules. It may be the best way to deal with preexisting C/C++ code, but in most cases maintainance and development of such modules will be difficult for web service developer. Others include spawning of child processes or communication with server systems using network streams. jbNode is an attempt to create simple and generic interface between node.JS and Java. On the Java side the Netty server is used. Jboss Netty is a fast non-blocking single threaded server written. 
 
 ## Running jbNode in standalone mode:
 
