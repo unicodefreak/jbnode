@@ -13,8 +13,8 @@ One of solutions is to create runtime modules. It may be the best way to deal wi
 
 1. install node.js
 2. Install Maven
-3. Clone the jbNode source, ch to that directory
-4. <pre>ch java && maven package assembly:assembly</pre>
+3. Clone the jbNode source, cd to that directory
+4. <pre>cd java && maven package assembly:assembly</pre>
 5. If were no errors, jbNode is now built in ./target/jbNode-assembly-1.0-package
 6. Run <pre>./run.sh --host localhost --port 8888 --modules=echo</pre>
 
