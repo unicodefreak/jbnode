@@ -5,7 +5,7 @@
 jbNode ("java-bridge-node") is a simple client/server framework supposed to provide a fast and simple access to Java services from node.js.
 
 There are many applications that can benefit from lightweight and hyper-fast node.js architecture. There are also many development issues that can't be solved using pure JavaScript and node.js API.
-The examples are: blocking and heavy tasks (sending emails, for example), operations with large amounts of data (file retrieval), intergation with external systems using complex interface (payment gateways), usage of complicated code that is difficult to reimplement (proprietary format parsing).
+The examples are: blocking and heavy tasks (sending emails), operations with large amounts of data (file retrieval), intergation with external systems using complex interface (payment gateways), usage of complicated code that is difficult to reimplement (RDBMS access, proprietary format parsing).
 
 One of solutions is to create runtime modules. It may be the best way to deal with preexisting C/C++ code, but in most cases maintainance and development of such modules will be difficult for web service developer. Others include spawning of child processes or communication with server systems using network streams. The ex
 
