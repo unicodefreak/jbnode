@@ -10,13 +10,13 @@ var jb = require('./jbnode');
     var unicodeString = "Hello, world!"
 
     var processResponse = function(response) {
-        sys.debug("Service responded: " + response.data);
+	sys.debug("Service responded: " + response.data);
 
-        jbNode.close();
+	jbNode.close();
     }
 
     var connect = function() {
-        jbNode.call("echoService.echo", unicodeString, processResponse);
+	jbNode.call("echoService.echo", unicodeString, processResponse);
     };
 
     var jbNode = new jb.JBNode(8888, "localhost");
