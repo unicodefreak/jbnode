@@ -136,3 +136,6 @@ A simple "load" test.
 
 Passing unicode strings.
 
+##Contacts
+
+Developer: partorg.dunaev@gmail.com
