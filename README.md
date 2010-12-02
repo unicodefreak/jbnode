@@ -2,12 +2,21 @@
 
 ##About
 
-jbNode ('java-bridge-node') is a simple client/server framework supposed to provide a fast and simple access to Java services from node.js.
+jbNode ("java-bridge-node") is a simple client/server framework supposed to provide a fast and simple access to Java services from node.js.
 
 There are many applications that can benefit from lightweight and hyper-fast node.js architecture. There are also many development issues that can't be solved using pure JavaScript and node.js API.
 The examples are: blocking and heavy tasks, operations with large amounts of data, intergation with external systems using complex interface, usage of complicated code that is difficult to reimplement.
 
-One of solutions is to create runtime modules. It may be the best way to deal with preexisting C/C++ code, but in most cases maintainance and development of such modules will be difficult for web service developer. Others include spawning of child processes or communication with server systems using network streams. jbNode is an attempt to create simple and generic interface between node.js and Java. On the Java side the [JBoss Netty](http://www.jboss.org/netty) server is used. Netty is a fast non-blocking single threaded server. 
+One of solutions is to create runtime modules. It may be the best way to deal with preexisting C/C++ code, but in most cases maintainance and development of such modules will be difficult for web service developer. Others include spawning of child processes or communication with server systems using network streams. jbNode is an attempt to create simple and generic interface between node.js and Java. On the Java side the [JBoss Netty](http://www.jboss.org/netty) (fast non-blocking single threaded server) is used.
+
+To call Java code from node.js using jbNode you have to:
+
+* create Java calss with methods accepting and returning byte arrays
+* run jbNode instance as a standalone server or embedded service and register your service class
+* connect to jbNode server using provided client for node.js
+* register result/error listeners and start executing asynchronous calls 
+
+High throughput is achieved by eliminating the need to parse complex protocol data (data overhead is about 20 bytes for request/response pair, data is passed in binary form) and high overall performance of Netty and node.js. 
 
 ## Running jbNode in standalone mode:
 
