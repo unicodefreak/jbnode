@@ -65,7 +65,7 @@ To execute an example, run jbNode server with all example modules enabled:
 
 Cd to the directory you cloned jbNode to and run:
 
-<pre>node.js example.js &lt;HOST&rt; &lt;PORT&rt; </pre> 
+<pre>node.js example.js &lt;HOST&gt; &lt;PORT&gt; </pre> 
 
 ###Echo example
 
