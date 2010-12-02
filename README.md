@@ -14,9 +14,9 @@ One of solutions is to create runtime modules. It may be the best way to deal wi
 1. install node.js
 2. Install Maven
 3. Clone the jbNode source, cd to that directory
-4. <pre>cd java && maven package assembly:assembly</pre>
-5. If were no errors, jbNode is now built in ./target/jbNode-assembly-1.0-package
-6. Run <pre>./run.sh --host localhost --port 8888 --modules=echo</pre>
+4. `cd java && maven package assembly:assembly`
+5. If were no errors, jbNode is now built in `./target/jbNode-assembly-1.0-package`
+6. Run `./run.sh --host localhost --port 8888 --modules=echo`
 
 You will see some log messages and finally the line will appear:
 <pre>INFO: Listening on [localhost:8888]</pre>
