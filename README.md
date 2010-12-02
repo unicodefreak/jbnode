@@ -109,7 +109,7 @@ The 'spring' module contains sample descriptors to initialize jbNode in Spring e
 
 ##Embedding jbNode
 
-Build jbNode using <pre>mvn install</pre> command, include <pre><artifactId>jbnode-core</artifactId></pre> in your Maven dependencies, instantiate JBNode class, set 'host' and 'port' fields. Use 'configure' method to attach a service. Call 'start' to bind the server. 
+Build jbNode using <pre>mvn install</pre> command, include <pre>&lt;artifactId&gt;jbnode-core&lt;/artifactId&gt;</pre> in your Maven dependencies, instantiate JBNode class, set 'host' and 'port' fields. Use 'configure' method to attach a service. Call 'start' to bind the server. 
 
 ##Writing modules
 
