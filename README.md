@@ -134,9 +134,9 @@ If something is broken, run tests to learn what exactly.
 
 ###test-composite-buffer.js
 
-CompositeBuffer, declared in jbnode.js, is a custom feature (based on node Buffers) used to fight incoming and outgoing "packet" fragmentation. 
+CompositeBuffer, declared in jbnode.js, is a custom feature (based on node Buffers) used to treat incoming and outgoing "packet" fragmentation. 
 
-The reason for custom buffering mechanism is simple: you can never know if 'incoming data' event was triggered on full message, or on the single byte or on hundreds of messages already waiting to be fetched. The outgoing buffers are needed to prevent the internal OS buffer from overflow. If application buffering is not used, the process may behave weird and in result hang or crash. If outgoing data is buffered withing the application, the app will simply terminate with out-of-memory error. 
+The reason for creating a secondary buffering mechanism is simple: you can never know if 'incoming data' event was triggered on full message, or on the single byte or on hundreds of messages already waiting to be fetched. The outgoing buffers are needed to prevent the internal OS buffer from overflow. If application buffering is not used, the process may behave weird and in result hang or crash. If outgoing data is buffered withing the application, the app will simply terminate with out-of-memory error. 
 
 ###test-errors.js
 
