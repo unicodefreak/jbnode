@@ -5,11 +5,11 @@
 jbNode ("java-bridge-node") is a simple client/server framework supposed to provide a fast and simple access to Java services from node.js.
 
 There are many applications that can benefit from lightweight and hyper-fast node.js architecture. There are also many development issues that can't be solved using pure JavaScript and node.js API.
-The examples are: blocking and heavy tasks (sending emails), operations with large amounts of data (file retrieval), intergation with external systems using complex interface (payment gateways), usage of complicated code that is difficult to reimplement (RDBMS access, proprietary format parsing).
+The examples are: blocking and heavy tasks (sending emails), operations with large amounts of data (file retrieval), integration with external systems using complex interface (payment gateways), usage of complicated code that is difficult to reimplement (RDBMS access, proprietary format parsing).
 
-One of solutions is to create runtime modules. It may be the best way to deal with preexisting C/C++ code, but in most cases maintainance and development of such modules will be difficult for web service developer. Others include spawning of child processes or communication with server systems using network streams.
+One of solutions is to create runtime modules. It may be the best way to deal with preexisting C/C++ code, but in most cases maintenance and development of such modules will be difficult for web service developer. Others include spawning of child processes or communication with server systems using network streams.
 
-jbNode is an attempt to create simple and generic network interface between node.js and Java. On the Java side the [JBoss Netty](http://www.jboss.org/netty) (fast non-blocking single threaded server) is used.
+jbNode is an attempt to create simple and generic network interface between node.js and Java. On the Java side the [JBoss Netty](http://www.jboss.org/netty) (very fast socket server built with [Java NIO](http://download.oracle.com/javase/6/docs/api/index.html?java/nio/channels/package-summary.html)) is used.
 
 To call Java code from node.js using jbNode you have to:
 
@@ -33,7 +33,7 @@ The service class may be extended to act as "request router", determining the fi
 
 You will see some log messages and finally the line will appear:
 <pre>INFO: Listening on [localhost:8888]</pre>
-If you see any Java exception, please read an error message. It will be clear if some kind of bind or misconfiguration error occured.
+If you see any Java exception, please read an error message. It will be clear if some kind of bind or configuration error occurred.
 
 ##The simplest example: 
 
@@ -116,9 +116,9 @@ Passing jobs to multiple Java workers (created with java.util.concurrent) and po
 
 ##jbNode architecture and Netty
 
-jbNode is a simple implementation of Netty server. The 'core' module contains all the code needed to run server. 
+jbNode is implemented on the top of JBoss Netty server. The 'core' module contains all the code needed to run server. 
 
-The 'spring' module contains sample descriptors to initialize jbNode in Spring environment. Module 'bootstrap', which is used to start standalone instance, is an example of initialization through Spring context. 
+The 'spring' module contains sample descriptors needed to initialize jbNode in Spring environment. Module 'bootstrap', which is used to start standalone instance, is an example of initialization through Spring context. 
 
 ##Embedding jbNode
 
@@ -136,7 +136,7 @@ If something is broken, run tests to learn what exactly.
 
 CompositeBuffer, declared in jbnode.js, is a custom feature (based on node Buffers) used to treat incoming and outgoing "packet" fragmentation. 
 
-The reason for creating a secondary buffering mechanism is simple: you can never know if 'incoming data' event was triggered on full message, or on the single byte or on hundreds of messages already waiting to be fetched. The outgoing buffers are needed to prevent the internal OS buffer from overflow. If application buffering is not used, the process may behave weird and in result hang or crash. If outgoing data is buffered withing the application, the app will simply terminate with out-of-memory error. 
+The reason for creating a secondary buffering mechanism is simple: you can never know if 'incoming data' event was triggered on full message, or on the single byte or on hundreds of messages already waiting to be fetched. The outgoing buffers are needed to prevent the internal OS buffer from overflow. If application buffering is not used, the process may behave weird and in result hang or crash. If outgoing data is buffered within the application, the app will simply terminate with out-of-memory error. 
 
 ###test-errors.js
 
