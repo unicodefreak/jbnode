@@ -80,9 +80,9 @@ Cd to the directory you cloned jbNode to and run:
 
 <pre>~# node example.js &lt;HOST&gt; &lt;PORT&gt; </pre> 
 
-###Echo example
+###Echo example: Java service
 
-The simplest scenario possible. Code for node.js is self-descriptive. The Java side (which is in ./java/examples/echo/src/main/java/net/karmafiles/jbnode/examples/echo/Echo.java) is also very simple:
+The simplest scenario possible. Echo example code for node.js is self-descriptive. The Java side (which is in ./java/examples/echo/src/main/java/net/karmafiles/jbnode/examples/echo/Echo.java) is also very simple:
 
 <pre>
 public class Echo {
