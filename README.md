@@ -20,7 +20,7 @@ To call Java code from node.js using jbNode you have to:
 
 High throughput is achieved by eliminating the need to parse complex protocol data (data overhead is about 20 bytes for request/response pair, data is passed in binary form) and high overall performance of Netty and node.js. 
 
-Byte array parameters are chosen for maximum binary compatibility. Service class may be extended to act as "request router", determining the final destination from parsed request data, so you may pass whatever data format you want.
+Byte array parameters are chosen for maximum binary compatibility, binary data and unicode are supported. Service class may be extended to act as "request router", determining the final destination from parsed request data, so you may pass whatever data format you want.
 
 ## Running jbNode in standalone mode:
 
