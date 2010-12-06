@@ -5,7 +5,7 @@
 jbNode ("java-bridge-node") is a simple client/server framework supposed to provide a fast and simple access to Java services from node.js.
 
 There are many applications that can benefit from lightweight and hyper-fast node.js architecture. There are also many development issues that can't be solved using pure JavaScript and node.js API.
-The examples are: blocking and heavy tasks (sending emails), operations with large amounts of data (file operations), integration with external systems using complex interface (payment gateways), usage of complicated code that is difficult to reimplement (RDBMS access, proprietary format parsing).
+The examples are: blocking and heavy tasks (sending emails), operations with large amounts of data (file operations), integration with 3rd parties using complex interface (payment gateways), usage of complicated code that is difficult to reimplement (RDBMS access, proprietary format parsing).
 
 One of solutions is to create runtime modules. It may be the best way to deal with preexisting C/C++ code, but in most cases maintenance and development of such modules will be difficult for web service developer. Others include spawning of child processes or communication with server systems using network streams.
 
@@ -20,7 +20,7 @@ To call Java code from node.js using jbNode you have to:
 
 High throughput is achieved by eliminating the need to parse complex protocol data (data overhead is about 20 bytes for request/response pair, data is passed in binary form) and high overall performance of Netty and node.js. 
 
-The service class may be extended to act as "request router", determining the final destination from parsed request data.
+Byte array parameters are chosen for maximum binary compatibility. Service class may be extended to act as "request router", determining the final destination from parsed request data, so you may pass whatever data format you want.
 
 ## Running jbNode in standalone mode:
 
