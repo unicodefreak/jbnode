@@ -152,4 +152,4 @@ Passing unicode strings.
 
 ##Contacts
 
-Developer: [partorg.dunaev@gmail.com](mailto:partorg.dunaev@gmail.com)
+Developer: [unicodefreak@gmail.com](mailto:unicodefreak@gmail.com)
